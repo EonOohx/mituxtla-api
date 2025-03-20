@@ -1,8 +1,7 @@
-import express from "express";
-import getPlaceDetails from "../controllers/placeDetailsController.js";
-import getPlaces from "../controllers/placesController.js";
+import { Router } from "express";
+import {getPlaces, getPlaceDetails} from "../controllers/places.controller.js";
 
-const router = express.Router();
+const router = Router();
 
 router.get("/details", getPlaceDetails);
 
