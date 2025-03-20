@@ -9,12 +9,14 @@
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "https://github.com/EonOohx",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
     "axios": "^1.8.3",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "express": "^4.21.2"
   }
 }
