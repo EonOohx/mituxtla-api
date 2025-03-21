@@ -21,7 +21,7 @@ export const getPlaces = async (req, res) => {
 
     const places = response.data.results.map(getPlaceData);
 
-    res.json({ places });
+    res.json(places);
   } catch (error) {
     console.error("Error fetching place details:", error.message);
     res.status(500).json({ error: "Error fetching place details" });
