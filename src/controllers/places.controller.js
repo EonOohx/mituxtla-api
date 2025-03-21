@@ -2,6 +2,8 @@ import axios from "axios";
 import { getPlaceData, getPlaceDetailedData } from "../models/places.model.js";
 import { GOOGLE_API_KEY, PLACES_URL, PLACE_DETAILS_URL } from "../config.js";
 
+const LOCATION_SEARCH = "in Tuxtla Gutiérrez, Chiapas, México"
+
 export const getPlaces = async (req, res) => {
   const { query } = req.query;
 
@@ -12,7 +14,7 @@ export const getPlaces = async (req, res) => {
   try {
     const response = await axios.get(PLACES_URL, {
       params: {
-        query,
+        query: `${query} ${LOCATION_SEARCH}`,
         key: GOOGLE_API_KEY,
         language: "es",
         minRating: 4.0,
