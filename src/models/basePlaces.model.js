@@ -1,4 +1,4 @@
-import getPhotoUrl from "../utils/photoUtils.js";
+import { GET_IMAGE_ENDPOINT } from "../config.js";
 
 const getBasePlaceData = (place) => {
   return {
@@ -11,5 +11,9 @@ const getBasePlaceData = (place) => {
         : null,
   };
 };
+
+function getPhotoUrl(photo_reference) {
+  return `${GET_IMAGE_ENDPOINT}?photo_ref=${photo_reference}`;
+}
 
 export default getBasePlaceData;
