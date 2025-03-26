@@ -12,6 +12,7 @@
   "author": "https://github.com/EonOohx",
   "license": "ISC",
   "devDependencies": {
+    "@azure-rest/ai-inference": "^1.0.0-beta.6",
     "nodemon": "^3.1.9"
   },
   "dependencies": {

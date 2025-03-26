@@ -6,6 +6,7 @@ import {
   PLACE_DETAILS_URL,
   PLACE_PHOTOS_URL,
 } from "../config.js";
+import { getPlaceDescription } from "../utils/aiModel.js";
 
 const LOCATION_SEARCH = "in Tuxtla Gutiérrez, Chiapas, México";
 
@@ -26,7 +27,9 @@ export const getPlaces = async (req, res) => {
       },
     });
 
-    const places = response.data.results.map(getPlaceData);
+    const places = response.data.results
+      .filter((it) => it.rating >= 4.3)
+      .map(getPlaceData);
 
     res.json(places);
   } catch (error) {
@@ -46,8 +49,9 @@ export const getPlaceDetails = async (req, res) => {
     const response = await axios.get(PLACE_DETAILS_URL, {
       params: { place_id, key: GOOGLE_API_KEY, language: "es" },
     });
-
+  
     const structuredData = getPlaceDetailedData(response.data.result);
+    structuredData.description = await getPlaceDescription(response.data.result.name, response.data.result.reviews)
 
     res.json(structuredData);
   } catch (error) {
