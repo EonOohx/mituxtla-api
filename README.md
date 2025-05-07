@@ -4,8 +4,6 @@ Esta API expone endpoints REST para obtener un listado de lugares en Tuxtla Guti
 
 ## 🔧 Tecnologías utilizadas
 - Node.js + Express
-- Axious
-- Dotenv
 - Google Places API
 - Azure OpenAI API (GPT-4o Mini)
 
