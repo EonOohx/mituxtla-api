@@ -2,7 +2,7 @@
 
 Esta API expone endpoints REST para obtener un listado de lugares en Tuxtla Gutiérrez, Chiapas, organizados por categoría, junto con información detallada de cada uno. Para ello, integra el servicio de **Google Places API** y el modelo de inteligencia artificial **GPT-4o Mini** (vía Azure API) para brindar descripciones ajustadas a cada lugar.
 
-## 🔧 Tecnologías y herramientas
+## 🔧 Tecnologías utilizadas
 - Node.js + Express
 - Axious
 - Dotenv
@@ -19,7 +19,7 @@ La aplicación que consume esta API forma parte del proyecto de la **aplicación
 
 📱 **Repositorio de la app móvil**: [Ver app en GitHub](https://github.com/EonOohx/mituxtla-app)
 
-## 🚀 Cómo ejecutar este servidor localmente
+## 🚀 Ejecutar servicio
 
 1. Clona el repositorio:
 ```bash
