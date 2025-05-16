@@ -1,4 +1,6 @@
 # 🌐 API REST para la App de MiTuxtlaApp
+![Inicio del proyecto](https://img.shields.io/badge/Inicio-Marzo%202025-blue)
+![Finalización del proyecto](https://img.shields.io/badge/Finalizado-Marzo%202025-green)
 
 Esta API expone endpoints REST para obtener un listado de lugares en Tuxtla Gutiérrez, Chiapas, organizados por categoría, junto con información detallada de cada uno. Para ello, integra el servicio de **Google Places API** y el modelo de inteligencia artificial **GPT-4o Mini** (vía Azure API) para brindar descripciones ajustadas a cada lugar.
 
