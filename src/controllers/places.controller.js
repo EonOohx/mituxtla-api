@@ -66,7 +66,7 @@ export const getPlacePhoto = async (req, res) => {
     return res.status(400).json({ error: "Missing img_refparameter" });
   }
 
-  const photo_url = `${PLACE_PHOTOS_URL}?photoreference=${photo_ref}&key=${GOOGLE_API_KEY}&maxwidth=400`;
+  const photo_url = `${PLACE_PHOTOS_URL}?photoreference=${photo_ref}&key=${GOOGLE_API_KEY}&maxwidth=100`;
 
   try {
     const response = await axios.get(photo_url, {

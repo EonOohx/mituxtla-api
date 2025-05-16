@@ -1,4 +1,3 @@
-import { getPlaceDescription } from "../utils/aiModel.js";
 import getBasePlaceData from "./basePlaces.model.js";
 
 export const getPlaceData = (place) => ({

@@ -13,7 +13,7 @@ export async function getPlaceDescription(place, reviews) {
     const response = await client.path("/chat/completions").post({
       body: {
         messages: [
-          { role: "system", content: "" },
+          { role: "system", content: "Generates brief, objective responses based on the comments provided." },
           {
             role: "user",
             content: placeDescriptionPrompt(
@@ -29,8 +29,8 @@ export async function getPlaceDescription(place, reviews) {
       },
     });
     return response.body.choices[0].message.content;
-  } catch (error) {
-    console.error("The sample encountered an error:", err);
-    return response.body.error;
+  }   catch (error) {
+    console.error("Error generating place description:", error.message);
+    return "The description could not be generated at this time.";
   }
 }
