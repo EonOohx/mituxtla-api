@@ -9,7 +9,6 @@ const client = ModelClient(
 );
 
 export async function getPlaceDescription(place, reviews) {
-  console.log(place)
   try {
     const response = await client.path("/chat/completions").post({
       body: {
