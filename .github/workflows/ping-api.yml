@@ -1,0 +1,12 @@
+name: Keep Render API Warm
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Cada 5 minutos
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render API
+        run: curl -sSf https://mituxtla-api.onrender.com/health || echo "API no respondió"
