@@ -5,7 +5,7 @@ export const getPlaceData = (place) => ({
 });
 
 export const getPlaceDetailedData = (place) => ({
-  ...getBasePlaceData(place),
+  ...getBasePlaceData(place, 400),
   address: place.formatted_address,
   location: place.geometry?.location ?? null,
   is_open: place.opening_hours?.open_now ?? null,
